@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 // ignore: import_of_legacy_library_into_null_safe
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:sotauapp/views/loginPage/login_form.dart';
 
 final List<String> imgList = [
   'assets/img/img_slide_1.png',
@@ -84,88 +85,46 @@ class _LoginPageState extends State<LoginPage> {
               children: [
                 RaisedButton(
                   shape: RoundedRectangleBorder(
-                      borderRadius: new BorderRadius.circular(10.0)),
+                      borderRadius: new BorderRadius.circular(5.0)),
                   onPressed: () {},
                   color: Colors.white,
                   textColor: Colors.black,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: <Widget>[
-                      Image.asset(
-                        "assets/img/facebook-logo.png",
-                        width: 40,
-                        height: 40,
-                      ),
-                      Text(
-                        'Sign In with Facebook',
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      ),
-                    ],
-                  ),
-                ),
-                RaisedButton(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: new BorderRadius.circular(10.0)),
-                  onPressed: () {},
-                  color: Colors.white,
-                  textColor: Colors.black,
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: <Widget>[
-                      Image.asset(
-                        "assets/img/google-logo.png",
-                        width: 30,
-                        height: 30,
-                      ),
-                      Text(
-                        'Sign In with Google',
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      ),
-                    ],
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: <Widget>[
+                        Image.asset(
+                          "assets/img/google-logo.png",
+                          width: 30,
+                          height: 30,
+                        ),
+                        Text(
+                          'Masuk Sebagai Mahasiswa',
+                          style: TextStyle(fontWeight: FontWeight.bold),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
                 Padding(
-                    padding: EdgeInsets.symmetric(vertical: 5.0),
+                    padding: EdgeInsets.symmetric(vertical: 8.0),
                     child: MaterialButton(
-                      minWidth: 300,
+                      minWidth: 400,
                       color: Colors.lightGreen,
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => LoginForm()));
+                      },
                       splashColor: Colors.white,
                       child: Text(
-                        "LOGIN",
+                        "Masuk Sebagai Admin",
                         style: TextStyle(
                             color: Colors.black, fontWeight: FontWeight.w700),
                       ),
                     )),
               ],
-            )),
-        Positioned(
-          bottom: 80,
-          left: 30,
-          right: 30,
-          child: Row(
-              mainAxisAlignment:
-                  MainAxisAlignment.center, //Center Column contents vertically,
-              crossAxisAlignment: CrossAxisAlignment
-                  .center, //Center Column contents horizontally,
-              children: [
-                Text(
-                  "Don't have account ? ",
-                  style: TextStyle(
-                    color: Colors.white,
-                  ),
-                ),
-                InkWell(
-                  onTap: () {},
-                  child: Text(
-                    "Register Now",
-                    style: TextStyle(
-                      color: Colors.lightGreen,
-                    ),
-                  ),
-                )
-              ]),
-        )
+            ))
       ],
     ));
   }
