@@ -16,8 +16,18 @@ class _MenuAugmentedRealityState extends State<MenuAugmentedReality> {
         iconCode: 4,
       ),
       body: Container(
+        height: MediaQuery.of(context).size.height,
         child: Center(
-          child: Text("Menu Augmented Reality"),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                "Tampilan 3d Gedung TAU",
+                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+              ),
+              Text("markerless based Augmented Reality"),
+            ],
+          ),
         ),
       ),
     );

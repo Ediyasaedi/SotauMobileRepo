@@ -21,6 +21,32 @@ class _CustomAppBarState extends State<CustomAppBar> {
     double fontSize = 20;
     double marginLeft = 20;
     double marginRight = 20;
+    Widget _logoOrLogout(iconCode) {
+      switch (iconCode) {
+        case 5:
+          return Flexible(
+            child: Center(
+                child: Container(
+                    margin: EdgeInsets.only(right: marginRight),
+                    child: InkWell(
+                        child: Text(
+                      "LOGOUT",
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    )))),
+            flex: 1,
+          );
+        default:
+          return Flexible(
+            child: Center(
+                child: Container(
+                    margin: EdgeInsets.only(right: marginRight),
+                    child:
+                        Image.asset("assets/img/tau_logo_bgtransparent.png"))),
+            flex: 1,
+          );
+      }
+    }
+
     Widget _dinamicTitle(iconCode) {
       switch (iconCode) {
         case 0:
@@ -107,6 +133,20 @@ class _CustomAppBarState extends State<CustomAppBar> {
                 ],
               ),
               flex: 3);
+        case 6:
+          return Flexible(
+              child: Row(
+                children: [
+                  Container(
+                    margin: EdgeInsets.only(left: marginLeft),
+                    child: Text(
+                      "Detail Artikel",
+                      style: TextStyle(fontSize: fontSize),
+                    ),
+                  )
+                ],
+              ),
+              flex: 3);
         default:
           return Flexible(
               child: Row(
@@ -130,14 +170,7 @@ class _CustomAppBarState extends State<CustomAppBar> {
             mainAxisAlignment: MainAxisAlignment.start,
             children: <Widget>[
               _dinamicTitle(iconCode),
-              Flexible(
-                child: Center(
-                    child: Container(
-                        margin: EdgeInsets.only(right: marginRight),
-                        child: Image.asset(
-                            "assets/img/tau_logo_bgtransparent.png"))),
-                flex: 1,
-              ),
+              _logoOrLogout(iconCode)
             ],
           ),
         ),

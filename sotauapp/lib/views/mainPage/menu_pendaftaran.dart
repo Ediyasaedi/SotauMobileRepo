@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sotauapp/components/color.dart';
 import 'package:sotauapp/components/custom_appbar.dart';
 
 class MenuPendaftaran extends StatefulWidget {
@@ -15,10 +16,162 @@ class _MenuPendaftaranState extends State<MenuPendaftaran> {
       appBar: CustomAppBar(
         iconCode: 5,
       ),
-      body: Container(
-        child: Center(
-          child: Text("Menu Pendaftaran"),
-        ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Container(
+            margin: EdgeInsets.all(16.0),
+            child: Text(
+              "Data Diri",
+              style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+            ),
+          ),
+          Container(
+            child: Padding(
+              padding: EdgeInsets.only(left: 8.0, right: 8.0),
+              child: Card(
+                color: cardBgColor,
+                child: InkWell(
+                  splashColor: Colors.blue.withAlpha(30),
+                  onTap: () {},
+                  child: SizedBox(
+                    child: Container(
+                      margin: EdgeInsets.all(16.0),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Row(
+                            children: [
+                              Flexible(
+                                child: Text(
+                                  "Email",
+                                ),
+                                flex: 2,
+                              ),
+                              Flexible(
+                                child: Text(
+                                  " : ",
+                                ),
+                                flex: 1,
+                              ),
+                              Flexible(
+                                child: Text(
+                                  "dummyjhonriris@gmail.com",
+                                ),
+                                flex: 6,
+                              ),
+                            ],
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Row(
+                            children: [
+                              Flexible(
+                                child: Text(
+                                  "Nama",
+                                ),
+                                flex: 2,
+                                fit: FlexFit.loose,
+                              ),
+                              Flexible(
+                                child: Text(
+                                  " : ",
+                                ),
+                                flex: 1,
+                                fit: FlexFit.loose,
+                              ),
+                              Flexible(
+                                child: Text(
+                                  "Dummy Jhon Riris",
+                                ),
+                                flex: 6,
+                              ),
+                            ],
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Row(
+                            children: [
+                              Flexible(
+                                child: Text(
+                                  "Tempat, Tanggal Lahir",
+                                ),
+                                flex: 4,
+                              ),
+                              Flexible(
+                                child: Text(
+                                  " : ",
+                                ),
+                                flex: 1,
+                              ),
+                              Flexible(
+                                child: Text(
+                                  "Jakarta, 12 Mei 2003",
+                                ),
+                                flex: 6,
+                              ),
+                            ],
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Row(
+                            children: [
+                              Container(
+                                margin: EdgeInsets.only(right: 10),
+                                child: Text(
+                                  "No Handphone :",
+                                ),
+                              ),
+                              Text(
+                                "081243214321",
+                              ),
+                            ],
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Row(
+                            children: [
+                              Container(
+                                margin: EdgeInsets.only(right: 10),
+                                child: Text(
+                                  "Asal Sekolah :",
+                                ),
+                              ),
+                              Text(
+                                "SMAN 136 Jakarta",
+                              ),
+                            ],
+                          ),
+                          SizedBox(
+                            height: 10,
+                          ),
+                          Row(
+                            children: [
+                              Container(
+                                margin: EdgeInsets.only(right: 10),
+                                child: Text(
+                                  "Tahun Lulus :",
+                                ),
+                              ),
+                              Text(
+                                "2021",
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }

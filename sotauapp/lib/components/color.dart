@@ -20,3 +20,4 @@ var bgBlack = HexColor("#060814");
 var customWhite = HexColor("#FFF");
 var pinkColor = HexColor("#E01945");
 var bgBottomNavBar = HexColor("#28388F");
+var cardBgColor = HexColor("#F3EBEB");
