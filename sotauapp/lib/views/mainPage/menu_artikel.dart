@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sotauapp/components/custom_appbar.dart';
+import 'package:sotauapp/views/adminPage/articleForm.dart';
 import 'package:sotauapp/views/mainPage/article/detail_article.dart';
 
 class MenuArtikel extends StatefulWidget {
@@ -24,6 +25,15 @@ class _MenuArtikelState extends State<MenuArtikel> {
     return Scaffold(
       appBar: CustomAppBar(
         iconCode: 1,
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          // Add your onPressed code here!
+          Navigator.of(context)
+              .push(MaterialPageRoute(builder: (context) => ArticleForm()));
+        },
+        child: const Icon(Icons.add),
+        backgroundColor: Colors.green,
       ),
       body: Container(
           child: ListView.separated(

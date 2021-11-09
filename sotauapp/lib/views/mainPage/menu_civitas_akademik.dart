@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sotauapp/components/color.dart';
 import 'package:sotauapp/components/custom_appbar.dart';
+import 'package:sotauapp/views/adminPage/civitasForm.dart';
 
 class MenuCivitasAkademik extends StatefulWidget {
   const MenuCivitasAkademik({Key? key}) : super(key: key);
@@ -15,6 +16,15 @@ class _MenuCivitasAkademikState extends State<MenuCivitasAkademik> {
     return Scaffold(
       appBar: CustomAppBar(
         iconCode: 2,
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          // Add your onPressed code here!
+          Navigator.of(context).push(
+              MaterialPageRoute(builder: (context) => CivitasAcademicForm()));
+        },
+        child: const Icon(Icons.add),
+        backgroundColor: Colors.green,
       ),
       body: LayoutBuilder(
         builder: (BuildContext context, BoxConstraints viewportConstraints) {

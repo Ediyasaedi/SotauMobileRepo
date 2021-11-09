@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sotauapp/components/color.dart';
 import 'package:sotauapp/components/custom_appbar.dart';
+import 'package:sotauapp/views/adminPage/infoForm.dart';
 
 class MenuInformasi extends StatefulWidget {
   const MenuInformasi({Key? key}) : super(key: key);
@@ -15,6 +16,15 @@ class _MenuInformasiState extends State<MenuInformasi> {
     return Scaffold(
       appBar: CustomAppBar(
         iconCode: 0,
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          // Add your onPressed code here!
+          Navigator.of(context)
+              .push(MaterialPageRoute(builder: (context) => InfoForm()));
+        },
+        child: const Icon(Icons.navigation),
+        backgroundColor: Colors.green,
       ),
       body: LayoutBuilder(
         builder: (BuildContext context, BoxConstraints viewportConstraints) {

@@ -163,6 +163,26 @@ class _MenuPendaftaranState extends State<MenuPendaftaran> {
                               ),
                             ],
                           ),
+                          SizedBox(
+                            height: 35,
+                          ),
+                          MaterialButton(
+                            elevation: 2,
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(10.0)),
+                            height: 52,
+                            minWidth: MediaQuery.of(context).size.width,
+                            color: bgBlack,
+                            onPressed: () {},
+                            splashColor: Colors.white,
+                            child: Text(
+                              "SUBMIT",
+                              style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w700,
+                                  fontSize: 16),
+                            ),
+                          )
                         ],
                       ),
                     ),
