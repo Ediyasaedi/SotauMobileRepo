@@ -1,29 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:sotauapp/components/color.dart';
 import 'package:sotauapp/components/custom_appbar.dart';
-import 'package:sotauapp/views/adminPage/infoForm.dart';
+import 'package:sotauapp/screens/adminPage/civitasForm.dart';
 
-class MenuInformasi extends StatefulWidget {
-  const MenuInformasi({Key? key}) : super(key: key);
+class MenuCivitasAkademik extends StatefulWidget {
+  const MenuCivitasAkademik({Key? key}) : super(key: key);
 
   @override
-  _MenuInformasiState createState() => _MenuInformasiState();
+  _MenuCivitasAkademikState createState() => _MenuCivitasAkademikState();
 }
 
-class _MenuInformasiState extends State<MenuInformasi> {
+class _MenuCivitasAkademikState extends State<MenuCivitasAkademik> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppBar(
-        iconCode: 0,
+        iconCode: 2,
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           // Add your onPressed code here!
-          Navigator.of(context)
-              .push(MaterialPageRoute(builder: (context) => InfoForm()));
+          Navigator.of(context).push(
+              MaterialPageRoute(builder: (context) => CivitasAcademicForm()));
         },
-        child: const Icon(Icons.navigation),
+        child: const Icon(Icons.add),
         backgroundColor: Colors.green,
       ),
       body: LayoutBuilder(
@@ -38,10 +38,11 @@ class _MenuInformasiState extends State<MenuInformasi> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
                   Container(
+                    height: 300,
+                    width: MediaQuery.of(context).size.width * 1,
                     child: Padding(
-                      padding: EdgeInsets.all(8.0),
+                      padding: EdgeInsets.only(left: 8.0, right: 8.0),
                       child: Card(
-                        color: cardBgColor,
                         child: InkWell(
                           splashColor: Colors.blue.withAlpha(30),
                           onTap: () {},
@@ -53,7 +54,7 @@ class _MenuInformasiState extends State<MenuInformasi> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    "Sejarah TAU",
+                                    "Dosen",
                                     style: TextStyle(
                                         fontSize: 14,
                                         fontWeight: FontWeight.bold),
@@ -61,59 +62,6 @@ class _MenuInformasiState extends State<MenuInformasi> {
                                   SizedBox(
                                     height: 10,
                                   ),
-                                  Text(
-                                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu scelerisque vitae pretium urna. Et volutpat ac pellentesque commodo sed scelerisque duis hendrerit aliquam.",
-                                    style: TextStyle(
-                                      fontSize: 12,
-                                    ),
-                                  )
-                                ],
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                  Container(
-                    margin: EdgeInsets.all(16.0),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          "Arti Logo TAU",
-                          style: TextStyle(
-                              fontSize: 14, fontWeight: FontWeight.bold),
-                        ),
-                        SizedBox(
-                          height: 10,
-                        ),
-                        Image.asset('assets/img/tau_simbol.png')
-                      ],
-                    ),
-                  ),
-                  Container(
-                    child: Padding(
-                      padding: EdgeInsets.only(left: 8.0, right: 8.0),
-                      child: Card(
-                        color: cardBgColor,
-                        child: InkWell(
-                          splashColor: Colors.blue.withAlpha(30),
-                          onTap: () {},
-                          child: SizedBox(
-                            child: Container(
-                              margin: EdgeInsets.all(16.0),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  Text(
-                                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ullamcorper sed pretium, at nibh molestie id vehicula nec tincidunt. Ultricies nisl, arcu in nullam consequat dui ridiculus mi. Fusce et sapien aliquam turpis. Vitae malesuada est nibh suspendisse dictum. Est, orci, sagittis suscipit adipiscing suscipit. ",
-                                    style: TextStyle(
-                                      fontSize: 12,
-                                    ),
-                                  )
                                 ],
                               ),
                             ),
@@ -138,7 +86,7 @@ class _MenuInformasiState extends State<MenuInformasi> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    "Visi",
+                                    "Jurusan",
                                     style: TextStyle(
                                         fontSize: 14,
                                         fontWeight: FontWeight.bold),
@@ -176,7 +124,7 @@ class _MenuInformasiState extends State<MenuInformasi> {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    "Misi",
+                                    "Fakultas",
                                     style: TextStyle(
                                         fontSize: 14,
                                         fontWeight: FontWeight.bold),

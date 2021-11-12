@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sotauapp/components/color.dart';
-import 'package:sotauapp/size_config.dart';
-import 'package:sotauapp/views/mainPage/main_menu.dart';
-import 'package:sotauapp/views/mainPage/menu_informasi.dart';
+import 'package:sotauapp/screens/mainPage/main_menu.dart';
 
 class LoginForm extends StatefulWidget {
   const LoginForm({Key? key}) : super(key: key);

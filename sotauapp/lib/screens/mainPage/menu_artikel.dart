@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:sotauapp/components/custom_appbar.dart';
-import 'package:sotauapp/views/adminPage/articleForm.dart';
-import 'package:sotauapp/views/mainPage/article/detail_article.dart';
+import 'package:sotauapp/screens/adminPage/articleForm.dart';
+import 'package:sotauapp/screens/mainPage/article/detail_article.dart';
 
 class MenuArtikel extends StatefulWidget {
   const MenuArtikel({Key? key}) : super(key: key);

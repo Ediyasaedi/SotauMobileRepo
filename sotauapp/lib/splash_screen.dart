@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:sotauapp/views/loginPage/login_page.dart';
+import 'package:sotauapp/screens/loginPage/login_page.dart';
 import 'package:sotauapp/size_config.dart';
 
 class SplashScreen extends StatefulWidget {

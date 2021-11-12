@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:sotauapp/components/color.dart';
-import 'package:sotauapp/views/mainPage/menu_artikel.dart';
-import 'package:sotauapp/views/mainPage/menu_augmented_reality.dart';
-import 'package:sotauapp/views/mainPage/menu_civitas_akademik.dart';
-import 'package:sotauapp/views/mainPage/menu_fasilitas.dart';
-import 'package:sotauapp/views/mainPage/menu_informasi.dart';
-import 'package:sotauapp/views/mainPage/menu_pendaftaran.dart';
+import 'package:sotauapp/screens/mainPage/menu_artikel.dart';
+import 'package:sotauapp/screens/mainPage/menu_augmented_reality.dart';
+import 'package:sotauapp/screens/mainPage/menu_civitas_akademik.dart';
+import 'package:sotauapp/screens/mainPage/menu_fasilitas.dart';
+import 'package:sotauapp/screens/mainPage/menu_informasi.dart';
+import 'package:sotauapp/screens/mainPage/menu_pendaftaran.dart';
 
 class MainMenu extends StatefulWidget {
   const MainMenu({Key? key}) : super(key: key);
